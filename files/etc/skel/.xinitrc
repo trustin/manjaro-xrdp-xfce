@@ -40,11 +40,5 @@ fi
 # See: https://bbs.archlinux.org/viewtopic.php?id=224787
 dbus-update-activation-environment --systemd DBUS_SESSION_BUS_ADDRESS DISPLAY XAUTHORITY
 
-# Start DBus (and kill the old ones).
-eval "$(dbus-launch --sh-syntax)"
-if [[ -n "$DBUS_SESSION_BUS_PID" ]]; then
-  pgrep -u "$(id -un)" dbus-daemon | grep -v "$DBUS_SESSION_BUS_PID" | xargs -r kill
-fi
-
 # Start XFCE.
 exec startxfce4
