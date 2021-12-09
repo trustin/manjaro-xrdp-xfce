@@ -204,6 +204,7 @@ RUN pacman -S --noconfirm --needed \
 # Install the desktop environment packages.
 RUN pacman -S --noconfirm --needed \
   baobab \
+  gnome-system-monitor \
   mousepad \
   manjaro-xfce-settings \
   manjaro-xfce-settings-shells \
@@ -226,7 +227,6 @@ RUN pacman -S --noconfirm --needed \
   xfce4-notifyd \
   xfce4-smartbookmark-plugin \
   xfce4-systemload-plugin \
-  xfce4-taskmanager \
   xfce4-time-out-plugin \
   xfce4-timer-plugin \
   xfce4-verve-plugin \
