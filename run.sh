@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 set -Eeuo pipefail
 
-docker stop manjaro-xrdp-xfce >/dev/null 2>&1 || true
-docker rm manjaro-xrdp-xfce >/dev/null 2>&1 || true
-docker create --name manjaro-xrdp-xfce \
+docker stop manjaro-xrdp >/dev/null 2>&1 || true
+docker rm manjaro-xrdp >/dev/null 2>&1 || true
+docker create --name manjaro-xrdp \
   --privileged \
   --env "PUID=$(id -u)" \
   --env "PUSER=$(id -un)" \
@@ -11,4 +11,4 @@ docker create --name manjaro-xrdp-xfce \
   --publish 2222:22 \
   --shm-size 1G \
   ghcr.io/trustin/manjaro-xrdp-xfce:latest
-docker start manjaro-xrdp-xfce
+docker start manjaro-xrdp
