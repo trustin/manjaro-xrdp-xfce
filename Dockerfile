@@ -284,6 +284,7 @@ RUN pacman -S --noconfirm --needed \
   manjaro-xfce-settings \
   ristretto \
   speedcrunch \
+  terminator \
   thunar-archive-plugin \
   xarchiver \
   xfce4 \
